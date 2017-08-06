@@ -1,0 +1,29 @@
+<!-- home.html -->
+	<toaster-container toaster-options="{'close-button': true}"></toaster-container>
+    <div class="jumbotron text-center">
+    	<h3 id="tituloSismos">Ultimos Sismos</h3>
+
+    	<button id="btnInformacionSismos"class="btn btn-default" ng-click="clickToOpen()"><span class="glyphicon glyphicon-info-sign"></span></button >
+       
+        <div class="panel panel-default">
+
+			<table class="table">
+			    <thead>
+			        <tr>
+				        <th class="text-center">Hora</th>
+				        <th class="text-center">Magnitud</th>
+				        <th class="text-center">Lugar</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+				    <tr ng-repeat="datos in response">
+				        <td>{{datos.time | date:"HH:mm:ss '-' dd/MM/yyyy"}}</td>
+				        <td>{{datos.mag}}</td>
+				        <td>{{datos.place}}</td>        
+				    </tr>
+			    </tbody>
+  			</table>
+		</div>
+    </div>
+
+    

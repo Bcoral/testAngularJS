@@ -1,0 +1,12 @@
+.PrimerLetra{
+	 text-transform:capitalize;;
+}
+#txtBuscar{
+	width:60%;
+}
+#tituloSismos{
+	display: inline;
+}
+#btnInformacionSismos{
+float:right ;
+}

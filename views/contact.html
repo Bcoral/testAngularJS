@@ -1,0 +1,26 @@
+<!-- contact.html -->
+<toaster-container toaster-options="{'close-button': true}"></toaster-container>
+<div class="jumbotron">
+	<center>Calculadora con Porcentaje</center>
+    <form ng-submit="calcular(nota,porcentaje)" style="margin-left:33%;">
+		<div  data-ng-repeat="choice in choices">
+	    	<label>Nota {{choice.id}}:</label>
+			<input id="" type="number" class="form-control-inline" ng-model="choice.nota" step="0.5"> 
+			<label>Porcentaje:</label>
+			<input id="" type="number" class="form-control-inline" ng-model="choice.porc" step="10">
+
+			<button type="button" class="btn btn-success" ng-show="$last" ng-click="addNewChoice()">
+				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+			</button>
+			<button type="button" class="btn btn-danger" ng-show="$last" ng-click="removeChoice()">
+				<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+			</button>
+	   	</div>
+	</form>
+
+	<center>
+        <button type="button" class="btn btn-default" aria-label="Left Align" ng-click="calcular(nota,porcentaje)">
+ 			<span class="glyphicon glyphicon-search" aria-hidden="true"></span> Calcular
+		</button>
+	</center>
+</div> 

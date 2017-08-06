@@ -1,0 +1,74 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html ng-app="demoApp">
+<head>
+    <meta charset="utf-8">
+    <title>Portafolio</title>
+    <!-- SCROLLS -->
+    
+    <!-- load bootstrap and fontawesome via CDN -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrapEdit.min.css" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/1.1.0/toaster.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.4.0/css/ngDialog.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.4.0/css/ngDialog-theme-default.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.4.0/css/ngDialog-theme-plain.min.css"/>
+    <link rel="stylesheet" href="css/estilo.css"/>
+    <!-- SPELLS -->
+
+    <!-- load angular via CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.js"></script>
+    <script src="https://code.angularjs.org/1.2.0/angular-animate.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/1.1.0/toaster.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.4.0/js/ngDialog.min.js"></script>
+
+
+    <!-- Controllers-->
+    <script src="app.js"></script>
+    <script src="controllers/mainCtrl.js"></script>
+    <script src="controllers/aboutCtrl.js"></script>
+    <script src="controllers/contactCtrl.js"></script>
+    <script src="config.js"></script>
+
+</head>
+
+<body>
+    <!-- HEADER AND NAVBAR -->
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Braulio Coral</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <ul class="nav nav-tabs">
+        <li id="menu1" role="presentation" ><a href="#"><span class="glyphicon glyphicon-globe" aria-hidden="true">
+            </span> Sismos</a>
+        </li>
+        <li id="menu2" role="presentation" ><a href="#about"><span class="glyphicon glyphicon-flash" aria-hidden="true">
+            </span> Clima</a>
+        </li>
+        <li id="menu3" role="presentation" ><a href="#contact"><span class="glyphicon glyphicon-align-left" aria-hidden="true">
+            </span> Calculadora de Notas %</a>
+        </li>
+      <!--  <li role="presentation"><a href="#contact"> <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Contact</a></li>
+          <li role="presentation"><a href="#">Messages</a></li>   class="active"  -->
+    </ul>
+
+    <!-- MAIN CONTENT AND INJECTED VIEWS -->
+      <div id="main">
+        <!-- angular templating -->
+        <!-- this is where content will be injected -->
+        <div ng-view></div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="text-center">
+    </footer>
+</body>
+</html>
